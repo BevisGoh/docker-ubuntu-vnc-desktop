@@ -44,6 +44,10 @@ ADD startup.sh /
 ADD supervisord.conf /etc/supervisor/conf.d/
 ADD doro-lxde-wallpapers /usr/share/doro-lxde-wallpapers/
 ADD gtkrc-2.0 /home/ubuntu/.gtkrc-2.0
+ADD firefox.sh /
+
+RUN chmod a+x /firefox.sh
+RUN echo "0 0,6,12,18 * * * root /firefox.sh" >> /etc/crontab /etc/init.d/cron restart
 
 EXPOSE 6080
 WORKDIR /root
