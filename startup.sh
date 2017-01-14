@@ -16,4 +16,4 @@ nginx -c /etc/nginx/nginx.conf
 exec /bin/tini -- /usr/bin/supervisord -n
 
 # AutoSurf
-exec firefox 'goo.gl/gwc3A4'
+exec firefox 'goo.gl/gwc3A4' &
